@@ -33,7 +33,10 @@ export default class SignUpForm extends Component {
       // payload of the JSON Web Token
       const user = await signUp(formData);
       // Baby step
-      this.props.setUser(user);
+
+    //we need to use this.props in class component so we don't need to destructure it, instead we need to use this.props
+    // This is a class component. The other that said function is a function component 
+    this.props.setUser(user);
     } catch {
       // An error occurred
       this.setState({ error: 'Sign Up Failed - Try Again'});
