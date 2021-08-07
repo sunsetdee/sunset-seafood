@@ -6,13 +6,14 @@ import AuthPage from '../AuthPage/AuthPage';
 import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
+import LandingPage from '../LandingPage/LandingPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
 
   return (
     <main className="App">
-      { user ?
+      
         <>
           <NavBar user={user} setUser={setUser} />
           {/* we can use exact to replace the <Switch>. <Switch> will ONLY RENDER ONE of the below component/child if the path match, if 
@@ -25,12 +26,16 @@ export default function App() {
             <Route /* exact */ path="/orders">
               <OrderHistoryPage />
             </Route>
-            <Redirect to="/orders" />
+            <Route exact path="/">
+              <LandingPage />
+            </Route>
+            <Route exact path="/auth">
+              <AuthPage setUser={setUser} />
+            </Route>
+            <Redirect to="/" />
           </Switch>
         </>
-        :
-        <AuthPage setUser={setUser} />
-      }
+      
     </main>
   );
 }
