@@ -23,6 +23,7 @@ export default function LandingPage() {
                 <Link>Beef</Link>&nbsp;&nbsp;
                 <Link>Vegetable</Link>&nbsp;&nbsp;
             </nav>
+            
 
         </body>
     </>

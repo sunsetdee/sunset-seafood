@@ -6,7 +6,10 @@
 
 .history-and-logout {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     text-decoration: none;
+}
+.history-logout-icon a{
+    margin: 0 0.5vmin;
 }
 

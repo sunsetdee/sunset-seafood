@@ -1,6 +1,8 @@
-import { signUp } from '../../utilities/users-service';
 import {useState} from 'react';
+import { Link } from "react-router-dom";
+import { signUp } from '../../utilities/users-service';
 import { useHistory } from 'react-router';
+import './SignUpForm.css'
 
 export default function SignUpForm({ setUser }) {
   const [formData, setFormData] = useState({
@@ -44,19 +46,18 @@ export default function SignUpForm({ setUser }) {
   const disable = formData.password !== formData.confirm;
   return (
     <div>
-      <div className="form-container">
+      <img className="signup-header-image" src="https://i.imgur.com/RmnMUQy.jpg"></img>
+      <h3 className="signup-h3">Lets get started</h3>
+      <div>
         <form autoComplete="off" onSubmit={handleSubmit}>
-          <label>Name</label>
-          <input type="text" name="name" value={formData.name} onChange={handleChange} required />
-          <label>Email</label>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-          <label>Password</label>
-          <input type="password" name="password" value={formData.password} onChange={handleChange} required />
-          <label>Confirm</label>
-          <input type="password" name="confirm" value={formData.confirm} onChange={handleChange} required />
+          <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="name" required />
+          <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="email" required />
+          <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="password" required />
+          <input type="password" name="confirm" value={formData.confirm} onChange={handleChange} placeholder="confirm password" required />
           <button type="submit" disabled={disable}>SIGN UP</button>
         </form>
       </div>
+      <p>Already a member?&nbsp;&nbsp;<Link to="/signup">Sign in</Link></p>
       <p className="error-message">&nbsp;{formData.error}</p>
     </div>
   );

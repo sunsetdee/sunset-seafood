@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import * as usersService from '../../utilities/users-service';
+import { Link } from "react-router-dom";
 import { useHistory } from 'react-router';
+import * as usersService from '../../utilities/users-service';
+import './LoginForm.css';
 
 export default function LoginForm({ setUser }) {
   const [credentials, setCredentials] = useState({
@@ -33,15 +35,17 @@ export default function LoginForm({ setUser }) {
 
   return (
     <div>
-      <div className="form-container" onSubmit={handleSubmit}>
-        <form autoComplete="off" >
-          <label>Email</label>
-          <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
-          <label>Password</label>
-          <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
-          <button type="submit">LOG IN</button>
-        </form>
+      <img className="login-header-image" src="https://i.imgur.com/RmnMUQy.jpg"></img>
+      <h3 className="login-h3">Welcome Back</h3>
+      <p className="login-p">Sign in with your email address and password</p>
+      <div className="login-form-container" onSubmit={handleSubmit}>
+        <form className="login-form" autoComplete="off" >
+          <input className="login-input" type="text" name="email" value={credentials.email} onChange={handleChange} placeholder="email" autoCorrect="off" autoCapitalize="off" required />
+          <input className="login-input" type="password" name="password" value={credentials.password} onChange={handleChange} placeholder="password" required />
+          <button className="login-button"  type="submit">LOG IN</button>
+         </form>
       </div>
+      <p className="login-p2">New to Sunset Seafood?&nbsp;&nbsp;<Link className="login-linkto-create" to="/signup">Create an account</Link></p>
       <p className="error-message">&nbsp;{error}</p>
 
     </div>

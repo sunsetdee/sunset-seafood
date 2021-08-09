@@ -1,0 +1,20 @@
+body {
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+}
+
+.signup-header-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 7vh;
+    width: auto;
+    margin-top: 50px;
+  }
+
+.signup-h3 {
+    margin-left: 33vw;
+    font-size: 30px;
+    margin-top: 50px;
+}

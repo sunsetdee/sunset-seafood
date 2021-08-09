@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import * as userService from '../../utilities/users-service';
-import './NavBar.css'
+import './NavBar.css';
 
 // we are not doing destructing below and using props instead so we can see the old school way. 
 export default function NavBar(props) {
@@ -13,10 +13,13 @@ export default function NavBar(props) {
     <nav>
       {
         props.user ?
-        <div >
+        <div className="history-and-logout">
+          <div></div>
           <span>Welcome {props.user.name}</span>
-          <Link className="history-and-logout" to="/orders"><i class="fas fa-history"></i></Link>
-          <Link className="history-and-logout" onClick={handleLogOut} to=""><i class="fas fa-sign-out-alt"></i></Link>
+          <div className="history-logout-icon">
+            <Link to="/orders"><i class="fas fa-history"></i></Link>
+            <Link onClick={handleLogOut} to=""><i class="fas fa-sign-out-alt"></i></Link>
+          </div>
         </div>
         : 
         <div className="signup-login">
