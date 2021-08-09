@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
+import { useHistory } from 'react-router';
 
 export default function LoginForm({ setUser }) {
   const [credentials, setCredentials] = useState({
@@ -7,6 +8,8 @@ export default function LoginForm({ setUser }) {
     password: ''
   });
   const [error, setError] = useState('');
+
+  const history = useHistory();
 
   function handleChange(evt) {
     setCredentials({ ...credentials, [evt.target.name]: evt.target.value });
@@ -21,7 +24,8 @@ export default function LoginForm({ setUser }) {
       // will resolve to the user object included in the
       // payload of the JSON Web Token (JWT)
       const user = await usersService.login(credentials);
-      setUser(user);
+      await setUser(user);
+      history.push('/')
     } catch {
       setError('Log In Failed - Try Again');
     }
@@ -39,6 +43,7 @@ export default function LoginForm({ setUser }) {
         </form>
       </div>
       <p className="error-message">&nbsp;{error}</p>
+
     </div>
   );
 }

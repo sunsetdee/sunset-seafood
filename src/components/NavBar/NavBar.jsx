@@ -13,17 +13,15 @@ export default function NavBar(props) {
     <nav>
       {
         props.user ?
-        <>
-        <Link to="/orders">Order History</Link>
-        &nbsp; | &nbsp;
-        <Link to="/orders/new">New Order</Link>
-        &nbsp;&nbsp;<span>Welcome, {props.user.name}</span>
-        &nbsp;&nbsp;<Link onClick={handleLogOut} to="">Log Out</Link>
-        </>
+        <div >
+          <span>Welcome {props.user.name}</span>
+          <Link className="history-and-logout" to="/orders"><i class="fas fa-history"></i></Link>
+          <Link className="history-and-logout" onClick={handleLogOut} to=""><i class="fas fa-sign-out-alt"></i></Link>
+        </div>
         : 
         <div className="signup-login">
-        <Link><i class="fas fa-user-plus"></i></Link>
-        &nbsp;&nbsp;  | &nbsp;&nbsp; <Link><i class="fas fa-sign-in-alt"></i></Link>
+        <Link to="/signup"><i class="fas fa-user-plus"></i></Link>
+        &nbsp;&nbsp;   &nbsp;&nbsp; <Link to="/login"><i class="fas fa-sign-in-alt"></i></Link>
         &nbsp;&nbsp;&nbsp;&nbsp;<Link><i class="fas fa-shopping-cart"></i></Link>
         </div>
       }

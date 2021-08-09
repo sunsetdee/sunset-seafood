@@ -7,6 +7,8 @@ import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
 import LandingPage from '../LandingPage/LandingPage';
+import LoginForm from '../../components/LoginForm/LoginForm';
+import SignUpForm from '../../components/SignUpForm/SignUpForm';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -29,8 +31,11 @@ export default function App() {
             <Route exact path="/">
               <LandingPage />
             </Route>
-            <Route exact path="/auth">
-              <AuthPage setUser={setUser} />
+            <Route exact path="/signup">
+              <SignUpForm setUser={setUser}/>
+            </Route>
+            <Route exact path="/login">
+              <LoginForm setUser={setUser}/>
             </Route>
             <Redirect to="/" />
           </Switch>
