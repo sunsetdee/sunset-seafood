@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './LandingPage.css';
+import CategoryPage from '../CategoryPage/CategoryPage';
 
 export default function LandingPage() {
 
@@ -20,10 +21,14 @@ export default function LandingPage() {
                 <Link>Crab</Link>&nbsp;&nbsp;
                 <Link>Fish</Link>&nbsp;&nbsp;
                 <Link>Shell Fish</Link>&nbsp;&nbsp;
+                <Link>Snake</Link>&nbsp;&nbsp;
+                <Link>Insects</Link>&nbsp;&nbsp;
                 <Link>Exoctic Animal</Link>&nbsp;&nbsp;
                 <Link>Beef</Link>&nbsp;&nbsp;
+                <Link>Pork and Chicken</Link>&nbsp;&nbsp;
                 <Link>Vegetable</Link>&nbsp;&nbsp;
             </nav>
+            <CategoryPage />
             
 
         </body>
