@@ -48,16 +48,17 @@ export default function SignUpForm({ setUser }) {
     <div>
       <img className="signup-header-image" src="https://i.imgur.com/RmnMUQy.jpg"></img>
       <h3 className="signup-h3">Lets get started</h3>
-      <div>
+      <p className="signup-p">Enter your information (required)</p>
+      <div className="signup-form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
-          <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="name" required />
-          <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="email" required />
-          <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="password" required />
-          <input type="password" name="confirm" value={formData.confirm} onChange={handleChange} placeholder="confirm password" required />
-          <button type="submit" disabled={disable}>SIGN UP</button>
+          <input className="signup-input" type="text" name="name" value={formData.name} onChange={handleChange} placeholder="name" required />
+          <input className="signup-input" type="email" name="email" value={formData.email} onChange={handleChange} placeholder="email" required />
+          <input className="signup-input" type="password" name="password" value={formData.password} onChange={handleChange} placeholder="password" required />
+          <input className="signup-input" type="password" name="confirm" value={formData.confirm} onChange={handleChange} placeholder="confirm password" required />
+          <button className="signup-button" type="submit" disabled={disable}>SIGN UP</button>
         </form>
       </div>
-      <p>Already a member?&nbsp;&nbsp;<Link to="/signup">Sign in</Link></p>
+      <p className="signup-p2">Already a member?&nbsp;&nbsp;<Link className="signup-link-to-login" to="/login">Sign in</Link></p>
       <p className="error-message">&nbsp;{formData.error}</p>
     </div>
   );

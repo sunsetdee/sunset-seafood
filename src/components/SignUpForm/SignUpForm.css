@@ -18,3 +18,45 @@ body {
     font-size: 30px;
     margin-top: 50px;
 }
+
+.signup-p {
+    margin-left: 33vw;
+    font-size: 18px;
+}
+
+.signup-form-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: -3vw;
+    /* margin-top: -4vh; */
+}
+
+.signup-input {
+    font-size: 20px;
+    height: 48px;
+    line-height: 24px;
+    color: #262626;
+    border: 1px solid #E0E0E0;
+    width: 30vw;
+    display: block;
+    margin-top: 3vh;
+}
+
+.signup-button {
+    margin-top: 3vh ;
+    height: 48px;
+    line-height: 24px;
+    width: 30.4vw;
+    color: white;
+    font-size: 18px;
+}
+
+.signup-p2 {
+    text-align: center;
+}
+
+.signup-link-to-login {
+    color: green;
+    text-decoration: none;
+}
