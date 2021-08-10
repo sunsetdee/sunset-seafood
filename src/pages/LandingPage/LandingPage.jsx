@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './LandingPage.css';
+
 export default function LandingPage() {
 
   return (
     <>
         <main className="landing-page">
             <h1 className="landing-title">Sunset Seafood</h1>
-            <p className="landing-title2">$4.99 Delivery Fee  •  20-30 Mins  •  Rating</p>
+            <p className="landing-title2"> • $4.99 Delivery Fee  •  20-30 Mins  •  Rating</p>
         </main>
         <body>
             <p className="landing-header">$$-Seafood-Meat-Vegan Friendly</p>

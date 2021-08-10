@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import './App.css';
 import { getUser } from '../../utilities/users-service';
-import AuthPage from '../AuthPage/AuthPage';
+import './App.css';
+// import AuthPage from '../AuthPage/AuthPage';
 import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginForm from '../../components/LoginForm/LoginForm';
 import SignUpForm from '../../components/SignUpForm/SignUpForm';
+// import CategoryIndex from '../../components/CategoryIndex/CategoryIndex';
+// import CategoryPage from '../CategoryPage/CategoryPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -31,6 +33,9 @@ export default function App() {
             <Route exact path="/">
               <LandingPage />
             </Route>
+            {/* <Route>
+              <CategoryPage />
+            </Route> */}
             <Route exact path="/signup">
               <SignUpForm setUser={setUser}/>
             </Route>

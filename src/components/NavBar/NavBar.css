@@ -8,8 +8,17 @@
     display: flex;
     justify-content: space-between;
     text-decoration: none;
+    margin-top: -4.3vmin;
 }
 .history-logout-icon a{
     margin: 0 0.5vmin;
+}
+
+.navbar-history-logout-icon {
+    color: rgba(255, 0, 47, 0.681);
+}
+
+.navbar-span{
+    font-size: 2.3vmin;
 }
 
