@@ -72,7 +72,7 @@ export default function CategoryIndex() {
             <div>
                 {
                     shrimps.map(shrimp => (
-                        <ItemCard handleShowItem={handleShowItem} item={shrimp} key={shrimp._id}/>
+                        <ItemCard item={shrimp} key={shrimp._id} handleShowItem={handleShowItem} />
                     ))
                 }
             </div>
@@ -80,39 +80,39 @@ export default function CategoryIndex() {
             <div>
                 {
                     crabs.map(crab => (
-                        <ItemCard item={crab}/>
+                        <ItemCard item={crab} key={crab._id} handleShowItem={handleShowItem}/>
                     ))
                 }
             </div>
-            <h3>Fish</h3>
+            <h3 id="fish">Fish</h3>
             <div>
                 {
                     fishes.map(fish => (
-                        <ItemCard item={fish}/>
+                        <ItemCard item={fish} key={fishes._id} handleShowItem={handleShowItem}/>
                     ))
                 }
             </div>
-            <h3>Shell Fish</h3>
+            <h3 id="shellFish">Shell Fish</h3>
             <div>
                 {
                     shellFishes.map(shellFish => (
-                        <ItemCard item={shellFish}/>
+                        <ItemCard item={shellFish} key={shellFish._id} handleShowItem={handleShowItem}/>
                     ))
                 }
             </div>
-            <h3>Snake</h3>
+            <h3 id="snake">Snake</h3>
             <div>
                 {
                     snakes.map(snake => (
-                        <ItemCard item={snake}/>
+                        <ItemCard item={snake} key={snake._id} handleShowItem={handleShowItem}/>
                     ))
                 }
             </div>
-            <h3>Insect</h3>
+            <h3 id="insect">Insect</h3>
             <div>
                 {
                     insects.map(insect => (
-                        <ItemCard item={insect}/>
+                        <ItemCard item={insect} key={insect._id} handleShowItem={handleShowItem}/>
                     ))
                 }
             </div>
@@ -120,37 +120,38 @@ export default function CategoryIndex() {
             <div>
                 {
                     hotPots.map(hotPot => (
-                        <ItemCard item={hotPot}/>
+                        <ItemCard item={hotPot} key={hotPot._id} handleShowItem={handleShowItem}/>
                     ))
                 }
             </div>
-            <h3>Beef</h3>
+            <h3 id="beef">Beef</h3>
             <div>
                 {
                     beefs.map(beef => (
-                        <ItemCard item={beef}/>
+                        <ItemCard item={beef} key={beef._id} handleShowItem={handleShowItem}/>
                     ))
                 }
             </div>
-            <h3>Pork</h3>
+            <h3 id="pork">Pork</h3>
             <div>
                 {
                     porkAndChickens.map(porkAndChicken => (
-                        <ItemCard item={porkAndChicken}/>
+                        <ItemCard item={porkAndChicken} key={porkAndChicken._id} handleShowItem={handleShowItem}/>
                     ))
                 }
             </div>
             <div>
+            <h3 id="vegetable">Vegetable</h3>
                 {
                     vegetables.map(vegetable => (
-                        <ItemCard item={vegetable}/>
+                        <ItemCard item={vegetable} key={vegetable._id} handleShowItem={handleShowItem}/>
                     ))
                 }
             </div>
             <div>
                 {
                     snacks.map(snack => (
-                        <ItemCard item={snack}/>
+                        <ItemCard item={snack} key={snack._id} handleShowItem={handleShowItem}/>
                     ))
                 }
             </div>
@@ -165,6 +166,7 @@ export default function CategoryIndex() {
              </div>
                <div>
                    {selectedItem.price}
+                   <img src={selectedItem.photo}/>
              </div>
          <button onClick={() => setShowModal(false)}>Close</button>
          </article>

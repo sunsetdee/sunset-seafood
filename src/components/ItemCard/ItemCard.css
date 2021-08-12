@@ -6,6 +6,7 @@
 
 .ItemCard:hover {
     border-color: gray;
+    cursor: pointer;
 }
 
 .ItemCard img {
