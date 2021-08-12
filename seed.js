@@ -18,13 +18,13 @@ const Item = require('./models/item');
         {name: 'Beef', sortOrder: 80},
         {name: 'Pork and Chicken', sortOrder: 90},
         {name: 'Vegetable', sortOrder: 100},
-        {name: 'Snacks and Appetizers', sortOrder: 110}
+        {name: 'Snacks', sortOrder: 110}
     ]);
 
     await Item.deleteMany({});
     const items = await Item.create([
         {name: 'Steam Live Metapenaeus Ensis', category: categories[0], 
-        description: 'Steam live Metapenaeus Ensis prawns dip in sauce of your choice', price: '$19.99 per lb', photo: ''},
+        description: 'Steam live Metapenaeus Ensis prawns dip in sauce of your choice', price: '$19.99 per lb', photo: "https://i.imgur.com/BhuPUyT.jpg"},
         {name: 'Steam Live Blue Crab', category: categories[1], description: 'Steam whole live blue crab serve with garlic ginger sauce',
         price: '$7.99 per lb'},
         {name: 'Steam Live Manila Clams', category: categories[3], description: 'Steam live manila clams', price: '$5.99 per lb'},

@@ -1,0 +1,29 @@
+.CategoryIndex > div {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(25rem, 30vw));
+    gap: 1rem;
+}
+
+.CategoryIndex h3 {
+    background-color: lightgray;
+    padding: .5rem;
+}
+
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+.modal article {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }

@@ -1,0 +1,25 @@
+.ItemCard {
+    display: flex;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+}
+
+.ItemCard:hover {
+    border-color: gray;
+}
+
+.ItemCard img {
+    width: 25%;
+}
+
+.ItemCard section {
+    width: 75%;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ItemCard section .name {
+    font-weight: bold;
+}
