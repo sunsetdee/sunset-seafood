@@ -24,7 +24,7 @@ const Item = require('./models/item');
     await Item.deleteMany({});
     const items = await Item.create([
         {name: 'Steam Live Metapenaeus Ensis', category: categories[0], 
-        description: 'Steam live Metapenaeus Ensis prawns dip in sauce of your choice', price: '$19.99 per lb'},
+        description: 'Steam live Metapenaeus Ensis prawns dip in sauce of your choice', price: '$19.99 per lb', photo: ''},
         {name: 'Steam Live Blue Crab', category: categories[1], description: 'Steam whole live blue crab serve with garlic ginger sauce',
         price: '$7.99 per lb'},
         {name: 'Steam Live Manila Clams', category: categories[3], description: 'Steam live manila clams', price: '$5.99 per lb'},
@@ -100,7 +100,7 @@ const Item = require('./models/item');
         {name: 'Thai Live River Prawn', category: categories[0], description: 'Live fresh water river prawn grilled at your table', 
         price: '$25 all you can eat'},
         {name: 'Thai Shark Fin Soup', category: categories[2], description: 'Shark fin in seafood broth served in claypot', price: '$9.99'},
-        {name: 'Thai Style Bull Penis Soup', category, categories[7], description: 'Bull penis in herb broth', price: '$6 per bowl'},
+        {name: 'Thai Style Bull Penis Soup', category: categories[7], description: 'Bull penis in herb broth', price: '$6 per bowl'},
         {name: 'Bull Vagina Soup', category: categories[7], description: 'Bull vagina served in beef bone broth', price: '$7 per bowl'},
         {name: 'Snake Soup', category: categories[4], description: 'Cobra snake soup with shredded chicken and mushroom', price: '$11 per bowl'},
         {name: 'Thai Jumping Shrimp', category: categories[0], description: 'Live tiny shrimp with chilli pepper in lime and house speical sauce', 
