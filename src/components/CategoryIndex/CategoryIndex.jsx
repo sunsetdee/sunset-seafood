@@ -60,6 +60,7 @@ export default function CategoryIndex() {
         })
     }
 
+    // below code is for when clicking on an item, it will set the showmodal to true and open up that item's modal page
     function handleShowItem(item) {
         setSelectedItem(item)
         setShowModal(true)
@@ -160,14 +161,18 @@ export default function CategoryIndex() {
         {showModal &&
          <section className="modal">
          <article>
+             <div className="modal-image-div">
+                <img className="modal-image" src={selectedItem.photo}/>
+             </div>
              <div>
                <div className="name">{selectedItem.name}</div>
                <div>{selectedItem.description}</div>
              </div>
                <div>
                    {selectedItem.price}
-                   <img src={selectedItem.photo}/>
              </div>
+             {/* the below code is for when clicking on the close button to close the modal, it will set showModal to false and
+             close the modal */}
          <button onClick={() => setShowModal(false)}>Close</button>
          </article>
         </section>
