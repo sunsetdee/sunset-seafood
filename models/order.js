@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const itemSchema = require('./item');
+const itemSchema = require('./itemSchema');
 
 const lineItemSchema = new Schema({
     qty: { type: Number, default: 1},
@@ -11,7 +11,7 @@ const lineItemSchema = new Schema({
 });
 
 lineItemSchema.virtual('extPrice').get(function() {
-    return this.qty * this.item.price;
+    return this.qty * parseFloat(this.item.price);
 });
 
 const orderSchema = new Schema ({
@@ -55,13 +55,16 @@ orderSchema.methods.AddItemToCart = async function(itemId) {
     return cart.save();
 };
 
-orderSchema.methods.setItemQty = function(itemId, newQty) {
+orderSchema.methods.setItemQty = async function(itemId, newQty) {
     const cart = this;
     const lineItem = cart.lineItems.find(lineItem => lineItem.item._id.equals(itemId));
     if (lineItem && newQty <= 0) {
         lineItem.remove();
     } else if (lineItem) {
         lineItem.qty = newQty;
+    } else {
+        const item = await mongoose.model('Item').findById(itemId);
+        cart.lineItems.push({ item, qty: newQty });
     }
     return cart.save();
 };

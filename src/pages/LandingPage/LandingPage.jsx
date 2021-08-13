@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './LandingPage.css';
-import CategoryPage from '../CategoryPage/CategoryPage';
+import CategoryIndexPage from '../CategoryIndexPage/CategoryIndexPage';
 
 export default function LandingPage() {
 
@@ -31,7 +31,7 @@ export default function LandingPage() {
                 <a href="#vegetable">Vegetable</a>&nbsp;&nbsp;
             </nav>
             <hr></hr>
-            <CategoryPage />
+            <CategoryIndexPage />
             
 
         </div>

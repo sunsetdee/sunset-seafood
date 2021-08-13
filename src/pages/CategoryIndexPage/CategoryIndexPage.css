@@ -4,8 +4,8 @@
     gap: 1rem;
 }
 
-.CategoryIndex h3 {
-    background-color: lightgray;
+.CategoryIndex h2 {
+    /* background-color: lightgray; */
     padding: .5rem;
 }
 
@@ -25,5 +25,31 @@
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 25%; /* Could be more or less, depending on screen size */
   }
+
+.modal article img {
+  width: 100%;
+}
+
+.modal-button {
+    border-radius: 50%;
+    width: 48px;
+    left: 8px;
+    top: 8px;
+    height: 48px;
+    z-index: 1;
+    background: #FFFFFF;
+    cursor: pointer;
+    /* border-width: 0; */
+    border-color: gray;
+  }
+
+  .modal-add-btn {
+    display: inline;
+  }
+
+  .modal-addtocart-button {
+    align-items: flex-end;
+  }
+

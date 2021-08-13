@@ -22,7 +22,7 @@ async function addToCart(req, res) {
 
 async function setItemQtyInCart(req, res) {
     const cart = await Order.getCart(req.user._id);
-    await cart.setItemQty(req.body.itemId, req.body.newQty);
+    await cart.setItemQty(req.params.itemId, req.params.qty);
     res.json(cart);
 }
 
