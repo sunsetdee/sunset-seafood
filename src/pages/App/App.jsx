@@ -11,6 +11,7 @@ import LoginForm from '../../components/LoginForm/LoginForm';
 import SignUpForm from '../../components/SignUpForm/SignUpForm';
 // import CategoryIndex from '../../components/CategoryIndex/CategoryIndex';
 // import CategoryPage from '../CategoryPage/CategoryPage';
+import CartDetailPage from '../CartDetailPage/CartDetailPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -41,6 +42,9 @@ export default function App() {
             </Route>
             <Route exact path="/login">
               <LoginForm setUser={setUser}/>
+            </Route>
+            <Route exact path="/cart">
+              <CartDetailPage />
             </Route>
             <Redirect to="/" />
           </Switch>
