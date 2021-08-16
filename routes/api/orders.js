@@ -7,7 +7,7 @@ router.get('/cart', ordersCtrl.cart);
 
 router.get('/history', ordersCtrl.history);
 
-router.post('/cart/checkout', ordersCtrl.checkout);
+router.put('/checkout', ordersCtrl.checkout);
 
 router.put('/:itemId/qty/:qty', ordersCtrl.setItemQtyInCart);
 

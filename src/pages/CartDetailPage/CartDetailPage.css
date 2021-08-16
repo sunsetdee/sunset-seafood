@@ -1,0 +1,23 @@
+.CartDetailPage {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 1rem;
+    width: 80%;
+    margin-top: 5rem;
+}
+
+.CartDetailPage .header {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.CartDetailPage p {
+    border-top: 2px solid gray;
+    padding: .5rem 0;
+    margin: 0;
+}
+
+.CartDetailPage p span {
+    font-size: larger;
+    font-weight: bold;
+}

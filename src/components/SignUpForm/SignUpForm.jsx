@@ -32,7 +32,7 @@ export default function SignUpForm({ setUser }) {
       // payload of the JSON Web Token
       const user = await signUp(newFormData);
       await setUser(user);
-      history.push('/')
+      history.push('/orders/new')
     } catch {
       // An error occurred
       setFormData({ error: 'Sign Up Failed - Try Again' });
