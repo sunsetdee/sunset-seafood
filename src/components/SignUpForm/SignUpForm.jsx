@@ -21,7 +21,9 @@ export default function SignUpForm({ setUser }) {
 
   function formInvalid() {
     // the below codes are for disabling the signup button if one of the below conditions are not met 
+    console.log(formData);
     return formData.name.length < 2 || formData.email.length < 3 || formData.password.length < 1 || (formData.confirm !== formData.password);
+
   }
 
   async function handleSubmit(evt) {

@@ -1,0 +1,13 @@
+.order-history-new-order {
+    text-decoration: none;
+    color: green;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 18px;
+}
+
+.order-history-h1 {
+    display: flex;
+    justify-content: center;
+    color: red;
+}

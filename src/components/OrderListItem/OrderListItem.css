@@ -1,0 +1,11 @@
+.order-History {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.order-id {
+    color: #2464B0;
+}

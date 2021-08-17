@@ -15,3 +15,7 @@ export function setItemQty(itemId, qty) {
 export function checkout() {
   return sendRequest(`${BASE_URL}/checkout`, 'PUT');
 }
+
+export function getOrderHistory() {
+  return sendRequest(`${BASE_URL}/history`);
+}
