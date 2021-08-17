@@ -188,7 +188,7 @@ const Item = require('./models/item');
         {name: 'Grilled Kobe Beef', category: categories[6], description: 'Grilled 100% Kobe beef', price: '77.50', photo: "https://i.imgur.com/GGqT9JW.jpg"},
         {name: 'Hong Kong Style Crab', category: categories[1], description: 'Hong Kong style stir fry crab', price: '30', photo: "https://i.imgur.com/0y71CO1.jpg"},
         {name: 'Fried Abalone', category: categories[3], description: 'Live abalone fried in salted egg yolk', price: '9 each', photo: "https://i.imgur.com/EgouZiO.jpg"},
-        {name: 'Portuguese Curry Crab', category: categories[1], description: 'Portuguese style curry crab', price: '45', photo: "https://i.imgur.com/cLj9py6.jpg"}
+        {name: 'Portuguese Curry Crab', category: categories[1], description: 'Portuguese style curry crab', price: '45', photo: "https://i.imgur.com/cLj9py6.jpg"},
     ]);
     console.log(items)
 

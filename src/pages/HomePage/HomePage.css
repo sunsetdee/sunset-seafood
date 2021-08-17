@@ -1,0 +1,17 @@
+.homepage-video-div {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(25rem, 31.5vw));
+    gap: 1vw;
+}
+
+.homepage-video-div video {
+    width: 100%;
+    object-fit: fill;
+}
+
+.homepage-video-div div {
+    height: 70vh;
+    overflow: scroll;
+    background-color: black;
+}
+

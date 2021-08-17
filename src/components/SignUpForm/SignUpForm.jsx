@@ -19,6 +19,11 @@ export default function SignUpForm({ setUser }) {
     setFormData({ ...formData, [evt.target.name]: evt.target.value})
   }
 
+  function formInvalid() {
+    // the below codes are for disabling the signup button if one of the below conditions are not met 
+    return formData.name.length < 2 || formData.email.length < 3 || formData.password.length < 1 || (formData.confirm !== formData.password);
+  }
+
   async function handleSubmit(evt) {
     evt.preventDefault();
     try {
@@ -43,7 +48,8 @@ export default function SignUpForm({ setUser }) {
   // The render method takes the place of 
   // a function component, in that its job
   // is to return the UI as JSX
-  const disable = formData.password !== formData.confirm;
+  // the below code is assigning the variable disable to formInvalid function
+  const disable = formInvalid();
   return (
     <div>
       <img className="signup-header-image" src="https://i.imgur.com/RmnMUQy.jpg"></img>
@@ -55,7 +61,8 @@ export default function SignUpForm({ setUser }) {
           <input className="signup-input" type="email" name="email" value={formData.email} onChange={handleChange} placeholder="email" required />
           <input className="signup-input" type="password" name="password" value={formData.password} onChange={handleChange} placeholder="password" required />
           <input className="signup-input" type="password" name="confirm" value={formData.confirm} onChange={handleChange} placeholder="confirm password" required />
-          <button className="signup-button" type="submit" disabled={disable}>SIGN UP</button>
+          {/* the below code is to disable the signup button if formInvalid function is true. and disabled={disable means to disable the button when disable variable is true} */}
+          <button className="signup-button" className={disable  ? 'login-button' : 'enough'} type="submit" disabled={disable}>SIGN UP</button>
         </form>
       </div>
       <p className="signup-p2">Already a member?&nbsp;&nbsp;<Link className="signup-link-to-login" to="/login">Sign in</Link></p>

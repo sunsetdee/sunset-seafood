@@ -50,7 +50,7 @@ body {
     width: 30.4vw;
     color: white;
     font-size: 18px;
-    background-color: #007B40;
+    /* background-color: #007B40; */
 }
 
 .login-p2 {
@@ -60,6 +60,16 @@ body {
 .login-linkto-create {
     color: green;
     text-decoration: none;
+}
+
+.enough {
+    background-color: green;
+    margin-top: 3vh ;
+    height: 48px;
+    line-height: 24px;
+    width: 30.4vw;
+    color: white;
+    font-size: 18px;
 }
 
 

@@ -18,6 +18,11 @@ export default function LoginForm({ setUser }) {
     setError('');
   }
 
+  function formInvalid() {
+    // the below codes are for disabling the signup button if one of the below conditions are not met 
+    return credentials.email.length < 4 || credentials.password.length < 3;
+  }
+
   async function handleSubmit(evt) {
     // Prevent form from being submitted to the server
     evt.preventDefault();
@@ -42,7 +47,7 @@ export default function LoginForm({ setUser }) {
         <form className="login-form" autoComplete="off" >
           <input className="login-input" type="text" name="email" value={credentials.email} onChange={handleChange} placeholder="email" autoCorrect="off" autoCapitalize="off" required />
           <input className="login-input" type="password" name="password" value={credentials.password} onChange={handleChange} placeholder="password" required />
-          <button className="login-button"  type="submit">LOG IN</button>
+          <button className="login-button" className={credentials.password.length > 2 ? 'enough' : 'login-button'} disabled={formInvalid()} type="submit">LOG IN</button>
          </form>
       </div>
       <p className="login-p2">New to Sunset Seafood?&nbsp;&nbsp;<Link className="login-linkto-create" to="/signup">Create an account</Link></p>
