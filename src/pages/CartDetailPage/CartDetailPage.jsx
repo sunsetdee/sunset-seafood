@@ -31,7 +31,7 @@ export default function CartDetailPage() {
 
     return (
         <div className="CartDetailPage">
-            <div className="header">Your tems</div><div className="header">Price</div><div className="header">Quantity</div><div className="header">Total</div>
+            <div className="header">Your Items</div><div className="header">Price</div><div className="header">Quantity</div><div className="header">Total</div>
 
             {
                cart.lineItems.length ? 
@@ -39,10 +39,11 @@ export default function CartDetailPage() {
                :
                <h1>You don't have any items in your cart</h1>
             }
-            { cart.lineItems.length && 
+            { cart.lineItems.length &&
                 <>
                 <span></span><span></span>
-                <button onClick={handleCheckout}>Checkout</button>
+                <button className="order-btn" onClick={handleCheckout}>Place Order</button>
+                {/* the toFixed()method is to add a decimal. the argument 2 means we are adding 2 numbers after the decimal */}
                 <p>Order Total: <span>${cart.orderTotal.toFixed(2)}</span></p>
                 </>
             }

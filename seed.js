@@ -103,8 +103,6 @@ const Item = require('./models/item');
         {name: 'Thai Style Bull Penis Soup', category: categories[7], description: 'Bull penis in herb broth', price: '6 per bowl', photo: "https://i.imgur.com/S7hXDOy.jpg"},
         {name: 'Bull Vagina Soup', category: categories[7], description: 'Bull vagina served in beef bone broth', price: '7 per bowl', photo: "https://i.imgur.com/2ggYHZE.jpg"},
         {name: 'Snake Soup', category: categories[4], description: 'Cobra snake soup with shredded chicken and mushroom', price: '11 per bowl', photo: "https://i.imgur.com/kJKBqDr.jpg"},
-        {name: 'Thai Jumping Shrimp', category: categories[0], description: 'Live tiny shrimp with chilli pepper in lime and house speical sauce', 
-        price: '7'},
         {name: 'Thai Style Beef Intestine Hot Pot', category: categories[7], description: 'Beef intestine with optional beef slices add-on hot pot style', 
         price: '9', photo: "https://i.imgur.com/lmvF9cF.jpg"},
         {name: 'Thai Style Catfish', category: categories[2], description: 'Thai style live catfish steamed in chilli', price: '7', photo: "https://i.imgur.com/MF1XEmf.jpg"},

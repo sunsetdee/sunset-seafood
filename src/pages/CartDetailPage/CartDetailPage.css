@@ -21,3 +21,9 @@
     font-size: larger;
     font-weight: bold;
 }
+
+.order-btn {
+    background-color: green;
+    color: white;
+    font-size: 18px;
+}

@@ -12,7 +12,7 @@ export default function ItemCard({item, handleShowItem}) {
                     <div className="itemCard-description">{item.description}</div>
                 </div>
                 <div>
-                    {item.price}
+                    ${item.price}
                 </div>
             </section>
             <img src={item.photo} />

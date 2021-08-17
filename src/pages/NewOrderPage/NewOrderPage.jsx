@@ -9,7 +9,7 @@ export default function NewOrderPage() {
     <>
         <main className="landing-page">
             <h1 className="landing-title">Sunset Seafood</h1>
-            <p className="landing-title2"> • $4.99 Delivery Fee  •  20-30 Mins  •  Rating</p>
+            <p className="landing-title2"> • $4.99 Delivery Fee  •  20-30 Mins  • ★★★★★</p>
         </main>
         <div>
             <p className="landing-header">$$-Seafood-Meat-Vegan Friendly</p>
