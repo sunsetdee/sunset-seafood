@@ -72,7 +72,7 @@ const Item = require('./models/item');
         {name: 'Steam Live Coral Spot Prawn', category: categories[0], description: 'Steam live coral spot prawn serve with chilli soy sauce', 
         price: '29.99 per lb', photo: "https://i.imgur.com/ZVIJYmb.jpg"},
         {name: 'Steam Fresh Oyster', category: categories[3], description: 'Steam fresh oyster with minced garlic', 
-        price: '1,99 each', photo: "https://i.imgur.com/zCPQxuX.jpg"},
+        price: '1.99 each', photo: "https://i.imgur.com/zCPQxuX.jpg"},
         {name: 'Steam Pork Spare Rib', category: categories[8], description: 'Steam pork spare ribs with vermicelli and melon in black bean sauce', 
         price: '7.99', photo: "https://i.imgur.com/qVo6FNJ.jpg"},
         {name: 'Vietnamese Egg Crab', category: categories[1], description: 'Steam live Vietnamese egg crab', 

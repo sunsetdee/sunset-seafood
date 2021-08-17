@@ -17,7 +17,6 @@ export default function NewOrderPage() {
             <h4 className="menu-all-day">Menu All Day</h4>
             <p className="landing-hour">9:00AM - 9:00PM</p>
             <nav className="landing-category">
-                <Link>Appetizers and Snacks</Link>
                 {/* we can add the # to an a tag and give an ID to it on the CategoryIndex to make it scroll to that part on the page */}
                 <a href="#shrimp">Shrimps</a>&nbsp;&nbsp;
                 <a href="#crab">Crab and Lobster</a>&nbsp;&nbsp;

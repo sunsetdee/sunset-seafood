@@ -31,7 +31,7 @@ export default function CartDetailPage() {
 
     return (
         <div className="CartDetailPage">
-            <div className="header">Item</div><div className="header">Price</div><div className="header">Quantity</div><div className="header">Total</div>
+            <div className="header">Your tems</div><div className="header">Price</div><div className="header">Quantity</div><div className="header">Total</div>
 
             {
                cart.lineItems.length ? 

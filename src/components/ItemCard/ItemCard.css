@@ -1,8 +1,9 @@
 .ItemCard {
     display: flex;
-    border: 2px solid lightgray;
+    border: 1px solid lightgray;
     border-radius: 4px;
     /* height: 160px; */
+    height: 10rem;
 }
 
 .ItemCard:hover {
@@ -12,6 +13,7 @@
 
 .ItemCard img {
     width: 25%;
+    object-fit: cover;
 }
 
 .ItemCard section {
@@ -24,4 +26,11 @@
 
 .ItemCard section .name {
     font-weight: bold;
+    border-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.itemCard-description {
+    color: #545454;
+    font-size: 14px;
 }

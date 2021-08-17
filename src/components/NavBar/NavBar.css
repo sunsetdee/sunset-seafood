@@ -1,7 +1,9 @@
 .signup-login {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: flex-end;
+    margin-top: -4.3vmin;
+
 }
 
 .history-and-logout {
@@ -19,7 +21,14 @@
 }
 
 .navbar-span{
-    font-size: 2.3vmin;
-    align-items: center;
+  /* margin auto will evenly center the text in the middle of the screen */
+  margin: auto;
+  color: #007F41;
+  font-size: 1.5rem;
 }
+
+.nav-bar-new-order {
+    text-decoration: none;
+}
+
 

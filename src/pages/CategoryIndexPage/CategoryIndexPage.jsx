@@ -38,7 +38,6 @@ export default function CategoryIndexPage() {
             const beefs = filterItems(items, 'Beef');
             const porkAndChickens = filterItems(items, 'Pork and Chicken');
             const vegetables = filterItems(items, 'Vegetable');
-            const snacks = filterItems(items, 'Snacks');
             setItems(items);
             setShrimps(shrimps);
             setCrabs(crabs);
@@ -159,23 +158,15 @@ export default function CategoryIndexPage() {
                     ))
                 }
             </div>
-            <div>
             <h2 id="vegetable">Vegetable</h2>
+            <div>
                 {
                     vegetables.map(vegetable => (
                         <ItemCard item={vegetable} key={vegetable._id} handleShowItem={handleShowItem}/>
                     ))
                 }
             </div>
-            <div>
-                {
-                    snacks.map(snack => (
-                        <ItemCard item={snack} key={snack._id} handleShowItem={handleShowItem}/>
-                    ))
-                }
             </div>
-            
-        </div>
         {showModal &&
          <section className="modal">
          <article>
@@ -186,18 +177,19 @@ export default function CategoryIndexPage() {
                 <img className="modal-image" src={selectedItem.photo}/>
              </div>
              <div>
-               <div className="name">{selectedItem.name}</div>
-               <div>{selectedItem.description}</div>
+               <div className="modal-name">{selectedItem.name}</div>
+               <div className="modal-description">{selectedItem.description}</div>
              </div>
-               <div>
+               <div className="modal-price">
                    {selectedItem.price}
              </div>
-             <div className="modal-add-btn">
+             <hr></hr>
+             <div className="modal-button-div">
                  <div>
                      <div>
-                         <button onClick={() => handleChangeQty(-1)}>-</button>
+                         <button className="modal-add-minus-btn" onClick={() => handleChangeQty(-1)}>-</button>
                          &nbsp;&nbsp; {qty} &nbsp;&nbsp;
-                         <button onClick={() => handleChangeQty(+1)}>+</button>
+                         <button className="modal-add-minus-btn" onClick={() => handleChangeQty(+1)}>+</button>
                      </div>
                  </div>
                  <div></div>

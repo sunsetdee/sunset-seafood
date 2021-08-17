@@ -12,13 +12,12 @@ export default function NavBar(props) {
   return (
     <nav>
       <img src="https://i.imgur.com/RmnMUQy.jpg"></img>
-
       {
         props.user ?
         <div className="history-and-logout">
-          <div><span className="navbar-span">Welcome {props.user.name}</span></div>
+          <div className="navbar-span"><span>Welcome {props.user.name}</span></div>
           <div className="history-logout-icon">
-            <Link to='/orders/new'>New Order</Link>
+            {/* <Link className="nav-bar-new-order" to='/orders/new'>New Order</Link> */}
             <Link className="navbar-history-logout-icon" to="/orders"><i class="fas fa-history"></i></Link>
             <Link className="navbar-history-logout-icon" onClick={handleLogOut} to=""><i class="fas fa-sign-out-alt"></i></Link>
           &nbsp;&nbsp;&nbsp;&nbsp;<Link to="/cart"><i class="fas fa-shopping-cart"></i></Link>

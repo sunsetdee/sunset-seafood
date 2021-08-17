@@ -9,7 +9,7 @@ export default function ItemCard({item, handleShowItem}) {
             <section>
                 <div>
                     <div className="name">{item.name}</div>
-                    <div>{item.description}</div>
+                    <div className="itemCard-description">{item.description}</div>
                 </div>
                 <div>
                     {item.price}
