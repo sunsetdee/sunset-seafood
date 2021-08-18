@@ -19,5 +19,11 @@
     display: flex;
     justify-content: flex-end;
     padding-top: 15px;
+    font-weight: bold;
+}
+
+.home-page-img {
+    height: 100%;
+    width: 100%;
 }
 

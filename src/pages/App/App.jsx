@@ -25,27 +25,36 @@ export default function App() {
           {/* we can use exact to replace the <Switch>. <Switch> will ONLY RENDER ONE of the below component/child if the path match, if 
           it doesn't match, it will keep looking at the below child until it finds a matching route. exact will only render the EXACT
           PATH*/}
-          <Switch>
-            <Route exact path="/">
-              <HomePage />
-            </Route>
-            <Route /* exact */  path="/orders/new">
-              <NewOrderPage />
-            </Route>
-            <Route /* exact */ path="/orders">
-              <OrderHistoryPage />
-            </Route>
-            <Route exact path="/signup">
-              <SignUpForm setUser={setUser}/>
-            </Route>
-            <Route exact path="/login">
-              <LoginForm setUser={setUser}/>
-            </Route>
-            <Route exact path="/cart">
-              <CartDetailPage />
-            </Route>
-            <Redirect to="/" />
-          </Switch>
+          {user ? 
+            <Switch>
+              <Route exact path="/">
+                <HomePage />
+              </Route>
+              <Route exact path="/orders/new">
+                <NewOrderPage />
+              </Route>
+              <Route exact path="/orders">
+                <OrderHistoryPage />
+              </Route>
+              <Route exact path="/cart">
+                <CartDetailPage />
+              </Route>
+              <Redirect to="/" />
+            </Switch>
+          :
+            <Switch>
+                <Route exact path="/">
+                  <HomePage />
+                </Route>
+                <Route exact path="/signup">
+                  <SignUpForm setUser={setUser}/>
+                </Route>
+                <Route exact path="/login">
+                  <LoginForm setUser={setUser}/>
+                </Route>
+                <Redirect to="/" />
+            </Switch>
+          }
         </>
       
     </main>
